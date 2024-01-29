@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/index.css' %}">
+    <script src='{% static "js/index.js" %}'></script>
+</head>
+<body>
+    <h1>Just a basic template </h1>
+
+    <form>
+        <select name="country" class="country" id='country'>
+                <option value="no_country">Select a country</option>
+                {% for dist in districts %}
+
+                <option value="{{dist.pk}}">{{dist.district}}</option>
+
+                {% endfor %}
+
+        </select>
+
+        <select name="city" id="city">
+
+        </select>
+
+    </form>
+</body>
+</html></html>
